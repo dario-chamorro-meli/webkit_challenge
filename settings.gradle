@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 rootProject.name = "Webkit Challenge"
 include ':client'
 include ':render'
+include ':theme'

@@ -3,5 +3,5 @@
     <string name="greetings">Animo, Igor</string>
     <string name="next">Siguiente</string>
     <string name="challenge">Challenge</string>
-    <string name="url_example">https://google.com</string>
+    <string name="url_example">https://www.google.com</string>
 </resources>

@@ -5,7 +5,9 @@
     <application>
         <activity
             android:name=".RenderActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.WebkitChallenge.NoActionBar"
+            />
     </application>
 
 </manifest>

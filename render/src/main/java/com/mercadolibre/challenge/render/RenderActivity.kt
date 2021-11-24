@@ -1,5 +1,6 @@
 package com.mercadolibre.challenge.render
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.mercadolibre.challenge.render.databinding.ActivityRenderBinding
@@ -13,8 +14,12 @@ class RenderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityRenderBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
 
-        setup()
+    override fun onResume() {
+        super.onResume()
+        setupToolBar()
+        setupWebView()
     }
 
     override fun onDestroy() {
@@ -22,9 +27,19 @@ class RenderActivity : AppCompatActivity() {
         _binding = null
     }
 
-    private fun setup() = intent.extras?.let {
+    private fun setupToolBar() = intent.extras?.let {
         val title = it.getString(EXTRA_TITLE, binding.webView.title)
         binding.toolbar.title = title
+
+        val url = it.getString(EXTRA_URL) ?: return@let
+        binding.webView.loadUrl(url)
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private fun setupWebView() = intent.extras?.let {
+        binding.webView.settings.run {
+            javaScriptEnabled = true
+        }
 
         val url = it.getString(EXTRA_URL) ?: return@let
         binding.webView.loadUrl(url)
