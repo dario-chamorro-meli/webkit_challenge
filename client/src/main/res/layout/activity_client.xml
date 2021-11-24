@@ -6,23 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".ClientActivity">
 
+
     <TextView
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:id="@+id/labelNoElevation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/greetings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/no_elevation"
+        app:layout_constraintBottom_toTopOf="@+id/btnNoElevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/btnNoElevation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toTopOf="@+id/labelBlueBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelNoElevation" />
+
+    <TextView
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:id="@+id/labelBlueBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blue_bar"
+        app:layout_constraintBottom_toTopOf="@+id/btnBlueBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNoElevation" />
+
+    <Button
+        android:id="@+id/btnBlueBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBlueBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

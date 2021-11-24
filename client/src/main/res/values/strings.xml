@@ -4,4 +4,6 @@
     <string name="next">Siguiente</string>
     <string name="challenge">Challenge</string>
     <string name="url_example">https://www.google.com</string>
+    <string name="no_elevation">Sin elevacion y color blanco</string>
+    <string name="blue_bar">Con elevación y color azul</string>
 </resources>

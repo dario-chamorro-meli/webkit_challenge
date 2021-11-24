@@ -16,19 +16,29 @@ class ClientActivity : AppCompatActivity() {
         _binding = ActivityClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setup()
+        setupButtons()
     }
 
-    private fun setup() {
-        binding.btnNext.setOnClickListener { goToGoogle() }
+    private fun setupButtons() {
+        binding.btnNoElevation.setOnClickListener { goToNoElevation() }
+
+        binding.btnBlueBar.setOnClickListener { goToBlueBar() }
     }
 
-    private fun goToGoogle() {
+    private fun goToNoElevation() {
         val intent = Intent(this, RenderActivity::class.java)
         intent.putExtra(RenderActivity.EXTRA_TITLE, getString(R.string.challenge))
         intent.putExtra(RenderActivity.EXTRA_URL, getString(R.string.url_example))
         startActivity(intent)
     }
+
+    private fun goToBlueBar() {
+        val intent = Intent(this, RenderActivity::class.java)
+        intent.putExtra(RenderActivity.EXTRA_TITLE, getString(R.string.challenge))
+        intent.putExtra(RenderActivity.EXTRA_URL, getString(R.string.url_example))
+        startActivity(intent)
+    }
+
 
     override fun onDestroy() {
         super.onDestroy()
