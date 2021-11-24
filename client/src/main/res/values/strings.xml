@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">client</string>
+    <string name="greetings">Animo, Igor</string>
+    <string name="next">Siguiente</string>
+    <string name="challenge">Challenge</string>
+    <string name="url_example">https://google.com</string>
+</resources>
